@@ -1,0 +1,22 @@
+import statistics
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        i=0
+        while nums1 or nums2:
+          nums1.append(nums2[i])
+          if (i+1) < ((len(nums1)) or (len(nums2))):
+            i+=1
+          
+        return nums1
+        
+
+
+
+
+p1 = Solution()
+print(p1.findMedianSortedArrays([1,2],[3,4]))
