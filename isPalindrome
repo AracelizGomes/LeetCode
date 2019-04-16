@@ -1,0 +1,16 @@
+def isPalindrome(s):
+  s=list(s)
+  for i in range(len(s)-1):
+    if (s[i].isalpha()==False):
+      s.remove(s[i])
+    #s.replace(" ", "")
+  for i in range(len(s)-1):
+    if s[i].lower() != (s[len(s)-1-i]).lower():
+      return False
+  return True
+  
+
+x = "racEcA r"
+y = "racecar"
+z = "RACE CaR"
+print(isPalindrome(z))
